@@ -118,8 +118,8 @@ if __name__ == '__main__':
         print("There is no such dataset")
 
 
-    # state = torch.load("ckpt_cmmp_MELD_epoch_8_67.77")
-    state = torch.load("ckpt_cmmp_IEMOCAP_epoch_45_74.19")
+    # state = torch.load("")
+    state = torch.load("")
     cmmp.load_state_dict(state)
     print('testing loaded Model')
     test_acc, test_pred, test_fscore = eval_model(cmmp, test_loader, 0, cuda)
