@@ -110,9 +110,9 @@ if __name__ == '__main__':
         cmmp.cuda()
 
 
-    if args.Dataset == 'MELD':
-        test_loader = get_MELD_loaders(valid=0.0, batch_size=batch_size, num_workers=2)
-    elif args.Dataset == 'IEMOCAP':
+    if args.Dataset == 'MELD': # num_layers_av=1
+        test_loader = get_MELD_loaders(valid=0.0, batch_size=batch_size, num_workers=2) 
+    elif args.Dataset == 'IEMOCAP':  # num_layers_av=2
         test_loader = get_IEMOCAP_loaders(valid=0.0, batch_size=batch_size, num_workers=2)
     else:
         print("There is no such dataset")
